@@ -2,8 +2,8 @@ from django.db import models
 
 
 class TestScores(models.Model):
-    test_name = models.CharField()
-    score = models.CharField()
+    test_name = models.CharField(max_length = 100)
+    score = models.CharField(max_length = 50)
     test_month = models.IntegerField()
     test_year = models.IntegerField()
     description = models.TextField()
@@ -26,7 +26,7 @@ class Projects(models.Model):
 
 
 class VolunteerServices(models.Model):
-    volunteer_experience_name = models.CharField()
+    volunteer_experience_name = models.CharField(max_length = 50)
     volunteer_start_month = models.IntegerField()
     volunteer_start_year = models.IntegerField()
     volunteer_end_month = models.IntegerField()
@@ -35,18 +35,18 @@ class VolunteerServices(models.Model):
 
 
 class Certifications(models.Model):
-    certification_name = models.CharField()
+    certification_name = models.CharField(max_length = 100)
     certification_duration_in_year = models.IntegerField()
     certification_duration_in_month = models.IntegerField()
     description = models.TextField()
 
 
 class Languages(models.Model):
-    language_name = models.CharField()
+    language_name = models.CharField(max_length = 50)
 
 
 class Skills(models.Model):
-    skill_name = models.CharField()
+    skill_name = models.CharField(max_length = 50)
     skill_upvote = models.IntegerField()
 
 
